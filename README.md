@@ -1,1 +1,1 @@
-# workers_demo
+Service Worker Demo
