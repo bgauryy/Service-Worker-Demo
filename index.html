@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <style>
+      img {
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Service Worker Test Site</h1>
+    <button onclick="makeRequest()">Make Request</button>
+    <div>
+      <img src="./logo.png" />
+    </div>
+
+    <script>
+      navigator.serviceWorker
+        .register('sw.js')
+        .then(function (registration) {
+          console.log('Service Worker registered');
+        })
+        .catch(function (error) {
+          console.error('Service Worker registration failed:', error);
+        });
+
+      function makeRequest() {
+        fetch('someFetch');
+      }
+    </script>
+  </body>
+</html>
